@@ -1,13 +1,10 @@
-export DEVKITPRO	:= /opt/devkitpro
-export DEVKITPPC	:= $(DEVKITPRO)/devkitPPC
-export PATH		:= $(DEVKITPPC)/bin:$(PATH)
-
 TARGET		:= EscondidasU
+BUILD		:= build
 SOURCES		:= src
 INCLUDES	:= include
-BUILD		:= build
 
-all: $(TARGET).rpx
+# Crea la carpeta build automáticamente si no existe
+$(shell mkdir -p $(BUILD))
 
 include $(DEVKITPRO)/wut/share/wut_rules
 
