@@ -23,5 +23,5 @@ jobs:
         with:
           name: EscondidasU-RPX
           path: |
-            *.rpx
-            *.wuhb
+            build/*.rpx
+            build/*.wuhb
