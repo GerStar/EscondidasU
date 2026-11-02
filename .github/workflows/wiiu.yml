@@ -12,6 +12,7 @@ jobs:
 
       - name: Fix pacman mirrors and install WUT
         run: |
+          mkdir -p /etc/pacman.d
           echo -e "User-Agent: Wget\n" > /etc/pacman.d/wget.conf
           sed -i 's/XferCommand = \/usr\/bin\/curl/XferCommand = \/usr\/bin\/wget --config=\/etc\/pacman.d\/wget.conf/g' /etc/pacman.conf
           dkp-pacman -Sy --noconfirm wiiu-dev
