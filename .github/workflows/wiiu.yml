@@ -12,7 +12,7 @@ jobs:
 
       - name: Install WUT and libraries
         run: |
-          dkp-pacman -Syu --noconfirm wiiu-dev wiiu-rules
+          dkp-pacman -Syu --noconfirm wiiu-dev
 
       - name: Build project
         run: |
